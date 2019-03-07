@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/news/news",
+    "pages/news/detail",
+    "pages/register/register",
+    "pages/welcome/welcome",
+    "pages/user/user",
+    "pages/uList/uList",
+    "pages/qrCode/qrCode",
+    "pages/myactive/myactive",
+    "pages/myactive/myactiveDetail",
+    "pages/activeDetail/detail",
+    "pages/active/active",
+    "pages/appointment/apt",
+    "pages/recognition/recognition",
+    "pages/index/index",
+    "pages/identity/identity",
+    "pages/repairStart/repairStart",
+    "pages/repairInfo/repairInfo",
+    "pages/service/service",
+    "pages/service/detail",
+    "pages/service/ProvidentFund",
+    "pages/userList/userList",
+    "pages/myappointment/myappointment",
+    "pages/myactive/sign",
+    "pages/logs/logs",
+    "pages/myScores/myScores",
+    "pages/assessInfo/assessInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2f92f8",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#2f92fa",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/news/news",
+        "text": "社区动态",
+        "iconPath": "static/icon/tabbaricon/bottom_icon05.png",
+        "selectedIconPath": "static/icon/tabbaricon/bottom_icon06.png"
+      },
+      {
+        "pagePath": "pages/appointment/apt",
+        "text": "场地预约",
+        "iconPath": "static/icon/tabbaricon/bottom_icon02.png",
+        "selectedIconPath": "static/icon/tabbaricon/bottom_icon01.png"
+      },
+      {
+        "pagePath": "pages/active/active",
+        "text": "社区活动",
+        "iconPath": "static/icon/tabbaricon/bottom_icon07.png",
+        "selectedIconPath": "static/icon/tabbaricon/bottom_icon08.png"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "text": "网上办事",
+        "iconPath": "static/icon/tabbaricon/bottom_icon09.png",
+        "selectedIconPath": "static/icon/tabbaricon/bottom_icon10.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的信息",
+        "iconPath": "static/icon/tabbaricon/bottom_icon04.png",
+        "selectedIconPath": "static/icon/tabbaricon/bottom_icon03.png"
+      }
+    ]
+  },
+  "enablePullDownRefresh": true,
+  "debug": true
+}

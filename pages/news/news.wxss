@@ -1,0 +1,57 @@
+/* pages/news/news.wxss */
+
+page {
+  height: 100%;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: 1197rpx;
+  margin-top: -30rpx;
+  margin-bottom: -70rpx；
+}
+
+/* 滚动容器  */
+
+.weui-tab__content,
+.apt-history,
+.scroll-box {
+  height: 100%;
+}
+.weui-tab{
+	/* height: 200px; */
+	width:100%;
+	}
+/*  顶部tab切换样式  */
+.page__bd {
+  padding-bottom: 0;
+}
+
+.weui-navbar {
+  background-color: #fff;
+}
+
+.weui-tab__content {
+  padding-top: 0.5rem;
+  box-sizing: border-box;
+}
+
+
+/* 滑动条  */
+
+.weui-navbar__slider {
+  width: 50%;
+  background-color: #2f92f8;
+}
+
+
+/* 颜色 */
+
+.weui-navbar__item.weui-bar__item_on {
+  color: #2f92f8;
+}
+
+.weui-cell {
+  padding: 0;
+}

@@ -1,0 +1,172 @@
+/* pages/user/user.wxss */
+
+page {
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.headerPic {
+  /* padding-top: 20rpx;
+  padding-bottom: 20rpx; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2f92f8;
+  /* position: absolute; */
+  min-height: 148px;
+  /* top: 0; *//* left: 0; *//* z-index: 200; */
+  padding-bottom: 0.7rem;
+}
+
+.headerPic .userinfo-nickname {
+  font-size: 30rpx;
+  color: #fff;
+  padding-bottom: 11rpx;
+}
+
+.headerPic .verify-icon {
+  width: 120rpx;
+  height: 36rpx;
+}
+
+.userinfo {
+  /* position: relative; */
+  width: 750rpx;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: cneter;
+  margin-top: 7px;
+  min-height: 108px;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  display: block;
+  width: 130rpx;
+  height: 130rpx;
+  margin: 15rpx;
+  /* margin-top: 50rpx; */
+  border-radius: 50%;
+  border: 2px solid #d9ebff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  background-color: #1e79d6;
+  padding: 20rpx 0;
+}
+
+.my-apt, .my-info {
+  flex: 1;
+  /* align-items: center */
+  font-size: 28rpx;
+  text-align: center;
+  color: white;
+  z-index: 100;
+}
+
+.my-apt {
+  border-right: 1px solid #1261b0;
+}
+
+.activeStyle {
+  color: yellow;
+  font-weight: bold;
+}
+
+.weui-tab__panel {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding-top: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.weui-cell {
+  background-color: #fff;
+}
+
+.aptTips {
+  height: 100%;
+  background-color: white;
+  text-align: center;
+  padding-top: 50rpx;
+}
+
+/***********修改weui样式↓******************/
+
+.weui-panel__bd {
+  padding-top: 20rpx;
+  width: 100%;
+}
+
+.weui-panel__bd .weui-cell__hd {
+  display: flex;
+}
+
+.weui-panel__bd .weui-cell__hd image {
+  width: 24px;
+  height: 24px;
+}
+
+/** 底部列表的样式 **/
+
+.user-lists {
+  box-sizing: border-box;
+  /* position: relative; */
+  height: 100%;
+  /* padding-top:160px; */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: auto;
+  padding: 0;
+}
+
+/** 扫一扫 图标 **/
+
+.scan {
+  color: #fff;
+  position: absolute;
+  right: 20%;
+  top: 18%;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.8rem;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.scan image {
+  width: 100%;
+  height: 100%;
+  filter: #fff;
+}
+
+.scan-box {
+  width: 22px;
+  height: 22px;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: rgba(0, 126, 255, 0.6);
+  border-radius: 8px;
+  margin-right: 5px;
+}
+
+.scan-box image {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}

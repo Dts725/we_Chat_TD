@@ -1,0 +1,46 @@
+<view class='content fz14'>
+  <view class='flex-start top'>
+    <view class='avatar'>
+    <image src='{{img}}'></image>
+    </view>
+    <view class='score'>
+      <view>姓名:{{score.username}}</view>
+      <view class='flex-start'>积分:<view class='color'>{{score.score}}</view></view>
+    </view>
+  </view>
+<view class='fz14 score-info'>积分明细</view>
+
+<scroll-view class='white uls' id='scoreScroll' scroll-y style="height: {{clientHeight+'px'}};">
+  <view wx:for="{{score.score_array}}" wx:for-index ='idx' wx:for-item="item" wx:key="inx">
+    <view class="lists flex-between">
+        <view class="flex-clumn-start">
+        <view class='fw700'>{{item.content}}</view>
+        <view class='fz12 c9'>{{item.date_time}}</view>
+        </view>
+        <view>
+          <view class="fz16 secod fz700 ">+{{item.reward}}</view>
+        </view>
+        <view>
+          <navigator wx:if="{{item.is_estimate === '未评价'}}" url ="../assessInfo/assessInfo?id={{item.id}}" class="assess co-ff">评价</navigator>
+          <view wx:if="{{item.is_estimate === '已评价'}}" class="assess bg-ce">已评价</view>
+        </view>
+    </view>
+
+    <!-- <view class="lists flex-between">
+        <view class="flex-clumn-start">
+        <view class='fw700'>三楼秧歌队比赛签到</view>
+        <view class='fz12 c9'>2018-07-15 <span>15:30</span></view>
+        </view>
+        <view>
+          <view class="secod fz700 fz16">+1</view>
+        </view>
+        <view>
+         <p class="assess">评价</p> 
+          <navigator url ="../assessInfo/assessInfo" class="assess bg-ce">已评价</navigator>
+        </view>
+    </view> -->
+
+   
+  </view>
+</scroll-view>
+</view>

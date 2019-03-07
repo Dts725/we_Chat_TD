@@ -1,0 +1,90 @@
+/**app.wxss**/
+@import 'weui.wxss';
+@import "utils/wxParse/wxParse.wxss";
+
+.container {
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+} 
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+.flex-clumn-between {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+
+}
+.flex-clumn-center {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+}
+.flex-clumn-start {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-start;
+
+}
+/* font */
+.fz14 {
+  font-size: 14px;
+}
+.fz12 {
+  font-size: 12px;
+}
+.fz16 {
+  font-size: 16px;
+}
+.white {
+  background-color: #fff;
+}
+.w100 {
+  width: 100%;
+}
+/* color */
+.ce {
+  color: #cecece;
+}
+.c9 {
+  color: #999;
+}
+.co-ff {
+  color: #fff;
+}
+.bg-ce {
+  background-color: #cecece!important;
+}
+.fw700 {
+  font-weight: 700;
+}

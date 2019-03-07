@@ -1,0 +1,28 @@
+<!--pages/components/linkage/linkage.wxml-->
+<text>pages/components/linkage/linkage.wxml</text>
+<view class="linkage-box">
+	<!-- 选择框 -->
+	<!-- <view wx:if="{{condition}}" class="citypicker"> -->
+	<view class="picker-bg" wx:if='{{showCommunityPicker}}' bindtap='openCloseCommunityPicker'></view>
+	<view wx:if='{{showCommunityPicker}}' class='picker-more'>
+		<picker-view indicator-style="height: 50px;" style="position:relative; background-color:#fff; z-index:1; width: 100%; height: 300px;" value="{{value}}" bindchange="bindCommunityPickerChange" class="citybody">
+			<view class="picker-top-btn">
+				<view bindtap="openCloseCommunityPicker" class="city-cancel">取消</view>
+				<view bindtap="sureCommunityPicker" class="city-true">确定</view>
+			</view>
+		<!-- <picker-view-column> -->
+				<!-- <view wx:for="{{communityList}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item.community_name}}</view>
+			</picker-view-column>
+			<picker-view-column>
+				<view wx:for="{{field}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item.fieldname}}</view>
+			</picker-view-column> -->
+			<picker-view-column>
+				<view wx:for="{{communityList}}" wx:key="id" style="line-height: 50px;padding-left:10px;">{{item.community_name}}</view>
+			</picker-view-column>
+			<picker-view-column>
+				<view wx:for="{{field}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item.fieldname}}</view>
+			</picker-view-column>
+		</picker-view>
+	</view>
+	
+</view>

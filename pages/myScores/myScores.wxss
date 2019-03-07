@@ -1,0 +1,46 @@
+
+.top {
+  padding: 1rem 1.5rem;
+  background-color: #fff;
+}
+.avatar image {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+
+}
+.color {
+  color: #2f92f9;
+}
+.score {  
+  padding-left: 1rem;
+}
+.content {
+  height: 100%;
+  width: 100%;
+background-color: #e2e2e2;
+}
+.score-info {
+  padding: 0.5rem 0.5rem;
+}
+.uls {
+  
+}
+.lists {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  border-bottom: 1px solid #efefef;
+}
+.secod {
+  color: #eb7e09;
+}
+.assess {
+  display: block;
+  width: 4rem;
+  line-height: 1.6rem;
+  text-align: center;
+  background-color: #2f92fa;
+  border-radius: 5px;
+
+}

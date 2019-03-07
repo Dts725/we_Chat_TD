@@ -1,0 +1,34 @@
+.content {
+  padding: 1rem 0.5rem;
+}
+.party {
+  height: 1.5rem;
+  border: 1px solid #cecece;
+}
+.party-content {
+  width: 99%;
+  height: 6rem;
+  border: 1px solid #cecece;
+}
+.addZip {
+  height: 4rem;
+  border: 1px dashed #cecece;
+}
+.btn-turn {
+  width: 30%;
+}
+.btn-submit {
+  width: 30%;
+  background-color: #2f92f8;
+}
+.farm-work {
+  width: 90%;
+  margin: 1rem auto 0.5rem auto;
+
+}
+.lin {
+  line-height: 1.5rem;
+}
+.btn {
+  margin-top:2rem;
+}

@@ -1,0 +1,27 @@
+/* pages/recognition/recognition.wxml */
+.recognition{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100rpx;
+}
+.recognition text{
+  display: flex;
+  justify-content: center;
+  font-size: 40rpx;
+  
+  width: 17rem;
+}
+text:nth-child(4),text:nth-child(3){
+  color: #999;
+  font-weight: none;
+  font-size: 28rpx
+}
+
+.recognition button{
+  color: white;
+  background: #2f92f8;
+  width: 16rem;
+  margin-top:250rpx;
+
+}

@@ -1,0 +1,11 @@
+<!--pages/components/cardEasy/cardEasy.wxml-->
+<view class="card" wx:if="{{cardData.title}}" bindtap="_detailEvent">
+  <image class="c-img" wx:if="{{cardData.image}}" src='{{imgUrl}}{{cardData.image}}' mode="scaleToFill" lazy-load="true"></image>
+  <view class="c-panel c-info-{{cardData.image?'':'padding'}}">
+		<view class="c-panel-title">{{cardData.title}}</view>
+		<view class="c-info-gray">
+			<view>{{cardData.date_time}}</view>
+			<view>{{cardData.author}}</view>
+		</view>
+  </view>
+</view>

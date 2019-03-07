@@ -1,0 +1,40 @@
+/* pages/service/service.wxss */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper .banner {
+  width: 100%;
+  height: 290rpx;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  line-height: 100rpx;
+  border-bottom: 1px solid #f2f2f2;
+  font-size:31rpx;
+
+}
+
+.item .detail {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 2rpx 40rpx;
+}
+
+.item .detail image{
+  width: 52rpx;
+  height: 52rpx;
+  margin-right:16rpx;
+
+}
+
+.test-img{
+  transform: rotate(90deg);
+  width:100%;
+  /* height: 100%; */
+}

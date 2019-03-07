@@ -1,0 +1,6 @@
+<!--pages/active/active.wxml-->
+<view class='container'>
+  <scroll-view class='scroll-box' bindscrolltoupper='getList' bindscrolltolower="getNextPage" scroll-y scroll-with-animation upper-threshold='-70' lower-threshold='-70'>
+    <card wx:for='{{cardData}}' content='{{item}}' wx:key='{{item.id}}' wx:if="{{item.is_show==2}}" style="width:100%;" cardData="{{item}}" status="{{status}}" bind:detailEvent='detailEvent' bind:signEvent='signEvent' bind:customEvent="customEvent" customName="{{isAdmin?'管理':''}}" showImg='{{isAdmin}}' imgsrc='{{scanImgSrc}}' bind:qrcodeEvent='scanImgEvent'></card>
+  </scroll-view>
+</view>

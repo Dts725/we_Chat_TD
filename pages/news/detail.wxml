@@ -1,0 +1,80 @@
+<!--pages/news/detail.wxml-->
+<import src="../../utils/wxParse/wxParse.wxml"/>
+<view class="adl">
+  <view class="adl-header">
+    <view class="adl-header-title">{{detail.title?detail.title:''}}</view>
+    <view class="adl-header-info">
+      <text style="margin-right:1rem;">{{detail.community_name?detail.community_name:'华纳社区'}}</text>
+      <text>发布时间：{{detail.date_time?detail.date_time:''}}</text>
+    </view>
+  </view>
+
+  <view class="adl-detail">
+    <!-- <image class="adl-img" src="{{fileUrl+'/'+detail.image}}" mode="widthFix" lazy-load="true"></image> -->
+      <!-- <view class="adl-detail-con">{{detail.introduction}}</view>   -->
+     <view class="adl-detail-con">
+     <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+     </view> 
+
+    <!-- <view class="adl-info">
+      <view class="row">
+        <view class="adl-info-lf">
+          <image src="../../static/icon/detail/icon1.png" mode="widthFix"></image>
+        </view>
+        <view class="adl-info-rt">
+          <view>{{detail.time?detail.time:''}}</view>
+        </view>
+      </view>
+      <view class="row">
+        <view class="adl-info-lf">
+          <image src="../../static/icon/detail/icon2.png" mode="widthFix"></image>
+        </view>
+        <view class="adl-info-rt">
+          <view>{{detail.place?detail.place:''}}</view>
+        </view>
+      </view>
+      <view class="row">
+        <view class="adl-info-lf">
+          <image src="../../static/icon/detail/icon3.png" mode="widthFix"></image>
+        </view>
+        <view class="adl-info-rt">
+          <view>{{detail.author?detail.author:''}}</view>
+        </view>
+      </view>
+      <view class="row">
+        <view class="adl-info-lf">
+          <image src="../../static/icon/detail/icon4.png" mode="widthFix"></image>
+        </view>
+        <view class="adl-info-rt">
+          <view>{{detail.contact?detail.contact:''}}</view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+
+  <!-- <view class="adl-footer row">
+    <ul class="adl-footer-lf">
+      <li class="adl-footer-lf-li">
+        <p class="font-gray-s">可得积分</p>
+        <p>{{detail.score?detail.score:0}}分</p>
+      </li>
+      <li class="adl-footer-lf-li">
+        <p class="font-gray-s">人数上限</p>
+        <p>{{detail.number?detail.number:'--'}}人</p>
+      </li>
+      <li class="adl-footer-lf-li">
+        <p class="font-gray-s">报名人数</p>
+        <p>{{detail.enroll_number?detail.enroll_number:0}}人</p>
+      </li>
+    </ul>
+    <view class="adl-footer-rt">
+      <button type="primary" bindtap="signEvent" disabled="{{detail.status!==1 && detail.status!==2}}">{{detail.status==1?'立刻报名':(detail.status==2?'取消报名':(detail.status==3?'已签到':'已结束'))}}</button>
+    </view>
+  </view> -->
+  
+  </view>
+
+
+
+
+</view>

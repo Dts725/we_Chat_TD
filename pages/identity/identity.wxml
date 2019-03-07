@@ -1,0 +1,16 @@
+<!--pages/identity/identity.wxml-->
+<view class='content'>
+  <view class='noIdentity' wx:if="{{true}}">
+    <text>华纳社区免证件办理业务</text>
+    <text>辅助系统用户认证</text>
+    <image src='../../static/icon/myicon/rzicon01.png' mode='aspectFit'></image>
+    <text>您尚未认证，请认证</text>
+    <button class="weui-btn" type="default" bindtap='identify'>用户认证</button>
+  </view>
+  <view class='identifying' wx:else>
+    <image src='../../static/icon/myicon/rzicon02.png' mode='aspectFit'></image>
+    <text>您的认证已成功提交！</text>
+    <text>我们将在2-5个工作日完成审核！</text>
+    <text>谢谢~</text>
+  </view>
+</view>

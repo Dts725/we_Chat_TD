@@ -1,0 +1,256 @@
+/* pages/appointment/apt.wxss */
+
+page,
+.apt {
+  height: 100%;
+}
+
+.apt {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+
+.apt-body {
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+
+/* 滚动容器  */
+
+.weui-tab__content,
+.apt-history,
+.scroll-box {
+  height: 100%;
+}
+
+
+/* 行容器 */
+
+.apt-row {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 8px 12px;
+  width: 100%;
+}
+
+
+/* 左侧标题 */
+
+.apt-title {
+  font-weight: bold;
+  display: inline-block;
+  /* width: 35%; */
+  flex: 2;
+  /* font-size:15px; */
+}
+
+.apt-title-info {
+  color: #1aad19;
+}
+
+
+/* 右侧内容 */
+
+.apt-con {
+  /* width: 64%; */
+  /*display: inline-block;*/
+  flex: 5;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* 预约场地和日期 */
+
+.picker {
+  width: 100%;
+}
+
+
+/* 社区和场地选择框 */
+
+.picker-more {
+  /* position: absolute; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.picker-more .picker-top-btn {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  box-sizing: border-box;
+  color: green;
+}
+
+.picker-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+
+/* 预约场地和日期的右侧图标 */
+
+.apt-icon {
+  float: right;
+  margin-top: 0.5rem;
+  width: 1rem;
+  height: 0.7rem;
+}
+
+
+/* 预约日期  */
+
+.apt-row-no {
+  display: block;
+  /* padding-bottom: 0; */
+}
+
+
+/* 预约时间  */
+
+.apt-chk-date {
+  width: 90%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.apt-chk-date-li {
+  width: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+
+/* 预约时间-时间 */
+
+.apt-chk-date-li-icon {
+  position: relative;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  background-color: #fcfff4;
+  border-radius: 10px;
+}
+
+.apt-chk-date-li-icon-checked {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  background-color: #1aad19;
+  border-radius: 10px;
+}
+
+
+/* 底部按钮  */
+
+.apt-body-btn {
+  background-color: transparent;
+}
+
+.apt-btn {
+  margin: 0 12px 10px 12px;
+  background-color: #2f92f8;
+  color: #fff;
+}
+
+.apt-con-phone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* 验证码按钮左侧的input  */
+
+.apt-con-left {
+  /* width:7.8rem; */
+  width: 59%;
+}
+
+
+/* 验证码按钮  */
+
+.apt-code {
+  margin: 0;
+  text-align: center;
+  color: #2f92f8;
+  border: 1px solid #2f92f8;
+  line-height: 1.5rem;
+  display: inline-block;
+  background-color: #fff;
+  width: 40%;
+}
+
+
+/*  顶部tab切换样式  */
+
+.page__bd {
+  padding-bottom: 0;
+}
+
+.weui-navbar {
+  background-color: #fff;
+}
+
+.weui-tab__content {
+  padding-top: 0.5rem;
+  box-sizing: border-box;
+}
+
+
+/* 滑动条  */
+
+.weui-navbar__slider {
+  width: 50%;
+  background-color: #2f92f8;
+}
+
+
+/* 颜色 */
+
+.weui-navbar__item.weui-bar__item_on {
+  color: #2f92f8;
+}
+
+.weui-cell {
+  padding: 0;
+}
+
+ /* 个人预约开关 */
+ .single{
+	 background-color: #ecf5ff;
+	 padding: 0.5rem;
+	 /* border-bottom: 1px solid #ddd; */
+	 /* color: #2f92f8; */
+ }
+ 
+ /* 使用资源方面 */
+ .can-use-number, .can-use-number-con{
+		color:#2f92f8;
+		font-weight:normal;
+ }

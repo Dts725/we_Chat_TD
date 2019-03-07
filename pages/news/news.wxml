@@ -1,0 +1,49 @@
+<!--pages/news/news.wxml-->
+<!-- <text>更多精彩  ，敬请期待！！！</text> -->
+<view class='container'>
+  <!-- <image style='width:50%;height:42%' src='../../static/icon/no_info.png'></image> -->
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+
+
+    <view class="weui-tab__panel">
+
+      <!-- <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <view class='apt-history'>
+          <scroll-view class='scroll-box' bindscrolltoupper='getAptList' scroll-y scroll-with-animation>
+
+            <panel bind:cancelEvent='cancel' wx:for='{{aptList}}' title='{{item.day}} {{item.moment}}' content='{{item}}' wx:key='item.id' cnKey='{{cnKey}}' contentType='object' customBtnStatuClass="{{item.customBtnStatuClass}}" showCustomBtn="{{showBtn&&item.is_show==1}}"
+              customBtnName="{{customBtnName}}" customBtnStatu="{{item.statusName}}" wx:if="{{item.is_show == 1}}">
+            </panel>
+          </scroll-view>
+
+        </view>
+      </view> -->
+
+      <!-- <card-easy wx:for="{{list}}" wx:key="id" cardData="{{item}}"></card-easy> -->
+
+      <!-- <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view class='apt-body'>
+
+
+        </view>
+      </view> -->
+
+			<scroll-view class='scroll-box' bindscrolltoupper='getList' bindscrolltolower="getNextPage" upper-threshold='70' lower-threshold='70' scroll-y scroll-with-animation>
+
+				<panelList wx:for="{{lists}}" wx:key="id" imgUrl="{{fileUrl}}/" cardData="{{item}}" bind:detailEvent="detailEvent"></panelList>
+			</scroll-view>
+    </view>
+
+
+
+  </view>
+
+</view>

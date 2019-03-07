@@ -1,0 +1,7 @@
+<!--pages/welcome/welcome.wxml-->
+<image class='welcome_bg' src='../../static/welcome.png' mode='widthFix'></image>
+<view class='welcome_box'>
+	<view class='welcome_box_title'>智慧泰达服务中心</view>
+	<view class='welcome_box_con'>社区资讯、场地预约、社区活动、网上办事……</view>
+	<button class='welcome_box_btn' open-type='getUserInfo' bindgetuserinfo="bindGetUserInfo">立刻体验</button>
+</view>

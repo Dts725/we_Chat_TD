@@ -1,0 +1,10 @@
+<!--pages/recognition/recognition.wxml-->
+<view class='content'>
+  <view class='recognition'>
+    <text>点击下方开始识别按钮识别</text>
+    <text>用户身份</text>
+     <image src='../../static/icon/myicon/rzicon03.png' mode='aspectFit'></image>
+    <!-- <text>您尚未认证，请认证</text>  -->
+    <button class="weui-btn" type="default" disabled='{{showBtn}}' bindtap='recognition'>开始识别</button>
+  </view>
+</view>

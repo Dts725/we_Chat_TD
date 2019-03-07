@@ -1,0 +1,84 @@
+<view class='apt-repair'>
+
+  <view class='apt-repair-title'>提交真实信息，完成认证</view>
+  <view class="weui-panel">
+    <view class="weui-cells weui-cells_in-small-appmsg">
+
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd weui-cell_primary apr-row">
+          <text class='apr-label'>姓名</text>
+          <text class='apr-con'>{{infos.username}}</text>
+        </view>
+
+      </navigator>
+
+      <!-- <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd weui-cell_primary apr-row">
+          <text class='apr-label'>姓别</text>
+          <text class='apr-con'>{{infos.gender}}</text>
+        </view>
+      </navigator> -->
+
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd weui-cell_primary apr-row">
+          <text class='apr-label'>身份证号</text>
+          <text class='apr-con'>{{infos.card}}</text>
+        </view>
+
+      </navigator>
+
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd weui-cell_primary apr-row">
+          <text class='apr-label'>手机号码</text>
+          <text class='apr-con'>{{infos.phone}}</text>
+        </view>
+
+      </navigator>
+
+
+    </view>
+  </view>
+
+
+  <view class='apt-repair-title'>上传头像</view>
+  <view class="weui-panel">
+    <view class="weui-cells weui-cells_in-small-appmsg">
+      <!-- <view class="weui-panel__hd">上传头像</view> -->
+
+      <view class="weui-cell weui-cell_access apr-cards">
+        <!-- <view class="weui-cell__bd weui-cell_primary"> -->
+        <view class='apr-cards-photo'>
+          <view class="weui-uploader__input-box" hover-class="weui-cell_active" hidden='{{showPhoto}}'>
+            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+          </view>
+          <image class='card-img' src='{{photo}}' hidden='{{!showPhoto}}' bindtap="chooseImage"></image>
+        </view>
+
+        <!-- </view> -->
+        <view class='card-info'>
+          <view class='card-title'>请拍照上传头像</view>
+          <text class='card-info-con'>( 自拍头像要清晰，否则无法通过审核。)</text>
+        </view>
+
+      </view>
+
+
+
+
+
+    </view>
+  </view>
+
+  <view class='apr-btn'>
+     <button class="weui-btn" type="primary" disabled='{{showBtn}}' bindtap='startIdentify'>开始认证</button> 
+  </view>
+
+
+
+
+
+
+
+
+
+</view>

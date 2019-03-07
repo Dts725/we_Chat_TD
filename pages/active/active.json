@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "社区活动",
+  "usingComponents": {
+    "card": "/pages/components/card/card"
+  }
+}

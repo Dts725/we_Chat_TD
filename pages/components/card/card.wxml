@@ -1,0 +1,34 @@
+<!--pages/components/card/card.wxml-->
+<view class="card" wx:if="{{cardData.name&& cardData.time && cardData.place}}">
+  <image class="c-img c-img-disable-{{cardData.status}}" wx:if="{{cardData.image}}" src='{{cardData.image}}' mode="scaleToFill" lazy-load="true"></image>
+  <view class="c-panel">
+    <view class="c-panel-title">{{cardData.name}}</view>
+    <view class="c-panel-body">
+      <view class="c-panel-row" wx:if="{{cardData.time}}">
+        <text class="c-panel-strong">活动时间：</text>
+        <text class="c-panel-rt-con">{{cardData.time}}</text>
+      </view>
+      <view class="c-panel-row" wx:if="{{cardData.place}}">
+        <text class="c-panel-strong">活动地点：</text>
+        <text class="c-panel-rt-con">{{cardData.place}}</text>
+      </view>
+      <view class="c-panel-row" wx:if="{{cardData.organization}}">
+        <text class="c-panel-strong">所属社团：</text>
+        <text class="c-panel-rt-con">{{cardData.organization}}</text>
+      </view>
+			<view class="c-panel-row" wx:if="{{cardData.community_name}}">
+				<text class="c-panel-strong">所属社区：</text>
+				<text class="c-panel-rt-con">{{cardData.community_name}}</text>
+			</view>
+    </view>
+
+    <view class="c-panel-footer">
+      <button class="c-btn c-detail" catchtap="_detailEvent">详情</button>
+      <!-- 状态按钮 -->
+      <button class="c-btn c-sign c-img-disable-{{cardData.status}} c-disable-sign{{cardData.status}}" type="primary" disabled='{{cardData.status!==1 && cardData.status!==2}}' catchtap="_signEvent" wx:if="{{cardData.status!=-10}}">{{cardData.status==1?'立刻报名':(cardData.status==2?'取消报名':(cardData.status==3?'已签到':'已结束'))}}</button>
+      <!-- 自定义按钮 -->
+      <button class="c-btn c-custom {{customClass}}" wx:if="{{customName}}" catchtap="_customEvent">{{customName}}</button>
+      <image class="c-qcode" src="{{imgsrc}}" wx:if="{{imgsrc&&showImg}}" bindtap="_qrcodeEvent"></image>
+    </view>
+  </view>
+</view>

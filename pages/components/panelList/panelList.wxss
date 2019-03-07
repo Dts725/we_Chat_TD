@@ -1,0 +1,66 @@
+/* pages/components/panelList/panelList.wxss */
+
+/* 总体设置  */
+
+.card {
+  width: 100%;
+  min-height: 2rem;
+  background-color: #fff;
+  margin: 10px 0;
+}
+
+/* 中间内容面板  */
+
+.card .c-panel {
+  box-sizing: border-box;
+  /* padding: 0 0.5rem 0.5rem; */
+}
+.card .c-row{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 0.8rem;
+}
+
+ /* 左侧内容 */
+ .c-body-left{
+	 flex:5;
+	 padding-right:0.5rem;
+ }
+ .c-panel-title {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+ }
+  /* 灰色字体 */
+ .c-info-gray {
+   font-size: 0.9rem;
+   color: #666;
+   margin-top: 0.2rem;
+   /* display: flex;
+   justify-content: space-between; */
+ }
+ 
+ .card .c-info-padding {
+   padding: 1rem 0.5rem;
+   /* background-color: #fcfff4; */
+   background-color: #ecf5ff;
+ }
+ 
+ /* 右侧内容 */
+ .c-body-right{
+	 flex:2
+ }
+ /* 右边图片  */
+ 
+ .card .c-img {
+   width: 100%;
+   height: 75px;
+   /* width: 375px;
+   height: 160px;  */
+ }
+
+

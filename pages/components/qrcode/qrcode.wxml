@@ -1,0 +1,20 @@
+<!--pages/components/qrcode/qrcode.wxml-->
+<view class="qr">
+  <view class="qr-title">{{title}}</view>
+  <view class="qr-con">
+    <div id="qrbox" class='qrbox'>
+      <canvas class='canvas' canvas-id='canvas' bindlongtap='_save'></canvas>
+      <image wx:if="{{showLogo}}" src="../../../static/taida.png"></image>
+    </div>
+    <!-- <button bindtap='_download'>下载</button> -->
+    <!-- <img id='qrlogo' src="../../../static/taida.png" /> -->
+    <!-- <img id='qrlogo' src='{{logoUrl}}' style="display:none;" /> -->
+    <!-- <image src="../../../static/taida.png"></image> -->
+    <!-- <image src="{{logoUrl}}"></image> -->
+    <view id='qrlogo' class="qr-con-info">{{info}}</view>
+  </view>
+  <!-- <view class="qr-footer">
+    <button type='pramary' wx:if="leftBtnName" bindtap="leftBtnEvent">{{leftBtnName}}</button>
+    <button type='pramary' wx:if="rightBtnName" bindtap="rightBtnEvent">{{rightBtnName}}</button>
+  </view>  -->
+</view>

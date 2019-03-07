@@ -1,0 +1,45 @@
+<!-- <view class="page"> -->
+
+<view class="weui-panel">
+  <view class="weui-panel__bd">
+    <view class="weui-media-box weui-media-box_small-appmsg">
+      <view class="weui-cells weui-cells_in-small-appmsg">
+        <!-- <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+           <view class="weui-cell__hd">
+                <image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" />
+              </view> 
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>文字标题</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator> -->
+        <navigator url="../user/user" class="weui-cell weui-cell_access panel-box" hover-class="weui-cell_active" wx:for='{{List}}' wx:key='item.id' bindtap='examine' data-id='{{item.id}}' data-ver='{{item.verify}}'>
+          <!-- <view class="weui-cell__hd">
+                <image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" />
+              </view> -->
+          <view class="weui-cell__bd weui-cell_primary panel-box-con">
+             <icon class='icon-left' type="success" size="26" hidden='{{item.verify==1}}'></icon> 
+            <icon class='icon-left' type="waiting" size="26" hidden='{{item.verify==2}}'></icon>
+            <view>
+              <text class='label name'>姓名：</text>{{item.username}}
+              <text class='label phone'>电话：</text>{{item.phone}}
+            </view>
+            <view>
+              <text class='label card'>身份证：</text>{{item.card}}
+            </view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+<!-- </view> -->
+<!-- </view> -->

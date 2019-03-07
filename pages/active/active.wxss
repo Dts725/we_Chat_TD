@@ -1,0 +1,9 @@
+/* pages/active/active.wxss */
+page{
+  height: 100%;
+  width:100%;
+  background-color:#ddd;
+}
+.scroll-box{
+  height: 100%;
+}

@@ -1,0 +1,19 @@
+<!--pages/components/panelList/panelList.wxml-->
+<view class="card" wx:if="{{cardData.title}}" bindtap="_detailEvent">
+
+  <view class="c-panel c-info-{{cardData.image?'':'padding'}}">
+    <view class="c-row">
+      <view class="c-body-left">
+        <view class="c-panel-title">{{cardData.title}}</view>
+        <view class="c-info-gray">
+          <text>{{cardData.date_time}}</text>
+          <text style="margin-left:1rem;">{{cardData.community_name? cardData.community_name : '华纳社区'}}</text>
+        </view>
+      </view>
+      <view class='c-body-right' wx:if="{{cardData.image}}" >
+        <image class="c-img" src='{{imgUrl}}{{cardData.image}}' mode="scaleToFill" lazy-load="true"></image>
+      </view>
+    </view>
+
+  </view>
+</view>

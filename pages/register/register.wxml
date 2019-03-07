@@ -1,0 +1,99 @@
+<!--pages/register/register.wxml-->
+<view style='height:100%; width:100%;'>
+  <!-- 第一页显示的图片  -->
+  <view class="apr-cards" hidden='{{disable}}'>
+    <image class='card-img card-img2' src='../../static/icon/myicon/rzicon03.png'></image>
+  </view>
+  <!-- 下一步后显示的照片  -->
+  <view class="apr-cards" hidden="{{!disable}}">
+    <view class='apr-cards-photo'>
+      <!-- showPhoto 无值时显示增加图片的input -->
+      <view class="weui-uploader__input-box" hover-class="weui-cell_active" wx:if='{{!showPhoto}}'>
+        <view class="weui-uploader__input" bindtap="chooseImage"></view>
+      </view>
+      <!-- showPhoto 有值且canEditPhoto为false时显示图片 -->
+      <image class='card-img' style='{{cardStyle}}' src='{{fileUrl}}/{{showPhoto}}' wx:if='{{showPhoto && !canEditPhoto}}'></image>
+      <!-- showPhoto 无值且canEditPhoto为true时显示可更换的图片 -->
+      <image class='card-img' style='{{cardStyle}}' src='{{fileUrl}}/{{showPhoto}}' wx:if='{{showPhoto && canEditPhoto}}' bindtap="chooseImage"></image>
+      <!-- <image class='card-img' src='{{showPhoto}}' hidden='{{!showPhoto}}' bindtap="chooseImage"></image> -->
+    </view>
+    <view class='card-info' wx:if='{{!showPhoto || canEditPhoto}}'>
+      <view class='card-title'>请拍照上传头像</view>
+      <text class='card-info-con'>( 自拍头像要清晰，否则无法通过审核。)</text>
+    </view>
+  </view>
+
+
+  <!-- 内容区域  -->
+  <view class='form-content'>
+    <!-- <form bindsubmit="formSubmit" bindreset="formReset"> -->
+    <view>
+
+      <view class='name'>
+        <view class='icon-wrapper'>
+          <image class='form-icon' src="../../static/icon/registericon/icon01.png"></image>
+          <!-- <image class='form-icon' src="../../static/icon/registericon/icon01.png"></image> -->
+        </view>
+        <view>
+          <input class="weui-input" bindblur="getUserName" value='{{field.username}}' placeholder="姓名(须与身份证一致)" disabled="{{disable}}" />
+        </view>
+      </view>
+
+      <view class='card'>
+        <view class='icon-wrapper'>
+          <image class='form-icon' src="../../static/icon/registericon/icon04.png"></image>
+        </view>
+        <view>
+          <input class="weui-input" bindblur="getCard" type='idcard' value='{{field.card}}' placeholder="请输入身份证号" disabled="{{disable}}" />
+        </view>
+      </view>
+      <view class='phone'>
+        <view class='icon-wrapper'>
+          <image class='form-icon' src="../../static/icon/registericon/icon02.png"></image>
+        </view>
+        <view>
+          <input class="weui-input" type='number' bindinput="getPhone" bindblur="getPhone" value="{{field.phone}}" placeholder="请输入手机号" disabled="{{disable}}" />
+        </view>
+        <view>
+          <view class="weui-vcode-btn" wx:if="{{textCode == '获取验证码'}}" bindtap="getValidateCode" hidden="{{disable}}">{{textCode}}</view>
+          <view class="weui-vcode-btn newBtn" wx:else>再次发送({{countDown}})</view>
+        </view>
+      </view>
+      <view class='code' hidden='{{disable}}'>
+        <view class='icon-wrapper'>
+          <image class='form-icon' src="../../static/icon/registericon/icon03.png"></image>
+        </view>
+        <view>
+          <input class="weui-input" bindinput="getCode" type='number' value='{{field.code}}' placeholder="手机验证码" disabled="{{disable}}" />
+        </view>
+      </view>
+
+      <!-- 社区 -->
+      <view class='communty'>
+        <view class='comunty-title'>请选择社区：</view>
+        <view class='comunty-con'>
+          <picker bindchange="bindCommunityChange" value="{{communitySelected}}" range="{{communityList}}" range-key="community_name">
+            <view class="weui-select">{{communityList[communitySelected].community_name}}</view>
+          </picker>
+        </view>
+      </view>
+
+
+
+
+
+    </view>
+
+    <!-- </form> -->
+
+    <!-- 底部的按钮-第一步  -->
+    <view class="weui-btn-area" hidden="{{disable}}">
+      <button class="next-btn" bindtap="goNext">下一步</button>
+    </view>
+    <!-- 底部的按钮-第二步  -->
+    <view class="weui-btn-area" hidden="{{!disable}}">
+      <button class="submit-btn" bindtap="goBack">返回</button>
+      <button class="submit-btn" bindtap="bundleInfo" disabled='{{disableSubmit}}'>确定绑定</button>
+    </view>
+  </view>
+</view>

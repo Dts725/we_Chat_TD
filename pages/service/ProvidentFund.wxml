@@ -1,0 +1,5 @@
+<!--ProvidentFund.wxml-->
+
+<!-- <view  class="provident"  mode="widthFix"> -->
+  <image  class='img'  src='https://static.shyunhua.com/staticHTML/gongjijin/gongjijin.jpg'  mode="widthFix"></image>
+<!-- </view> -->

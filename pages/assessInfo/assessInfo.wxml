@@ -1,0 +1,26 @@
+<view class='content fz14'>
+<view class='farm-work'>
+  <view class='lin'>主题</view>
+  <input class='party' bindblur="topicFn" type='text'></input>
+</view>
+<view class="farm-work">
+  <view class='lin'>内容</view>
+  <textarea bindblur='contentFn' class='party-content' maxlength = '150'></textarea>
+</view>
+<view  class="farm-work" bindtap='uploadFile'>
+  <view class='lin'>添加附件</view>
+  <view class="addZip flex-clumn-center">
+  <view wx:if="{{!imageShow}}">上传图片</view>
+
+  <image wx:if="{{!imageShow}}" style='width:24px;height:24px;' src='../../static/icon_add.png'></image> 
+   <image wx:if="{{imageShow}}"  mode='aspectFit' src='{{imageShow}}' ></image>
+  </view>
+</view>
+
+<view class='flex-around btn'>
+<button class="btn-turn"  bindtap='return'>返回</button>
+<button bindtap='submit' class='btn-submit'>提交</button>
+</view>
+
+</view>
+

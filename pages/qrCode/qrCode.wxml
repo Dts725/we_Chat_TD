@@ -1,0 +1,32 @@
+<!--pages/qrCode/qrCode.wxml-->
+<view class="qc">
+  <qrcode url="{{qrUrl}}" title="{{title}}" info="{{info}}"></qrcode>
+  <view class="adl-info">
+    <view class="row">
+      <view class="adl-info-lf">签到人数</view>
+      <view class="adl-info-rt">
+        <view id="sign" bindtap="getList" style="color:#f00;">{{detail.sign_number?detail.sign_number:0}}</view>
+      </view>
+    </view>
+    <view class="row">
+      <view class="adl-info-lf">报名人数</view>
+      <view class="adl-info-rt">
+        <view id="enroll" bindtap="getList" style="color:#f00;">{{detail.enroll_number?detail.enroll_number:0}}</view>
+      </view>
+    </view>
+    <view class="row">
+      <view class="adl-info-lf">人数上限</view>
+      <view class="adl-info-rt">
+        <view>{{detail.number?detail.number:'--'}}</view>
+      </view>
+    </view>
+    <view class="row">
+      <view class="adl-info-lf">可得积分</view>
+      <view class="adl-info-rt">
+        <view>{{detail.score?detail.score:0}}</view>
+      </view>
+    </view>
+  </view>
+
+
+</view>

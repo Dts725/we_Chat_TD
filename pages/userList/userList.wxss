@@ -1,0 +1,41 @@
+/* pages/userList/userList.wxss */
+@import '../../weui.wxss';
+
+.label {
+  min-width: 3.8rem;
+  color: #2f92f8;
+  display: inline-block;
+}
+
+.phone {
+  min-width: 2.8rem;
+  margin-left: 1rem;
+}
+
+.panel-box {
+  position: relative;
+}
+
+/* .panel-box-con {
+  padding-left: 1rem;
+}
+
+.icon-left {
+  position: absolute;
+  left: 0.2rem;
+  color: #fff;
+  top: 1.2rem;
+} */
+.panel-box-con {
+  /* padding-left: 1rem; */
+}
+
+.icon-left {
+  position: absolute;
+  right: 0.5rem;
+  color: #fff;
+  top: 1rem;
+  z-index: 100;
+  background-color:#fff;
+  border-radius:2rem;
+}

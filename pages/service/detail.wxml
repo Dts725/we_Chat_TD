@@ -1,0 +1,23 @@
+<!--pages/news/detail.wxml-->
+<!-- <import src="../../utils/wxParse/wxParse.wxml" /> -->
+<!-- <view class="adl"> -->
+	<!-- <view class="adl-header">
+    <view class="adl-header-title">{{detail.title?detail.title:''}}</view>
+    <view class="adl-header-info">
+      <text style="margin-right:1rem;">发布人：{{detail.author?detail.author:''}}</text>
+      <text>发布时间：{{detail.date_time?detail.date_time:''}}</text>
+    </view>
+  </view> -->
+	<!-- <view>{{src}}</view> -->
+	<!-- <web-view src="{{src}}" /> -->
+	<web-view src="{{src}}"></web-view>
+	<!-- <view class="adl-detail">
+		<view class="adl-detail-con">
+			<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+		</view>
+	</view> -->
+
+
+
+
+<!-- </view> -->

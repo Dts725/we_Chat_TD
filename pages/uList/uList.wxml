@@ -1,0 +1,20 @@
+<!--pages/uList/uList.wxml-->
+<ul class="box">
+<scroll-view class='scroll-box' bindscrolltoupper='getList' bindscrolltolower="getNextPage" scroll-y scroll-with-animation>
+  <li wx:for="{{list}}">
+    <p class="box-row">
+      <span class="box-lf">
+        <strong>姓名：</strong>{{item.username?item.username:'无'}}
+      </span>
+      <span class="box-rt">
+        <strong>时间：</strong>{{item.time?item.time:'无'}}
+      </span>
+    </p>
+    <p class="box-row">
+      <span class="box-lf">
+        <strong>电话：</strong>{{item.phone?item.phone:'无'}}
+      </span>
+    </p>
+  </li>
+</scroll-view>
+</ul>

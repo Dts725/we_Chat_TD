@@ -1,0 +1,94 @@
+/* pages/repairInfo/repairInfo.wxss */
+
+/* 总体设置  */
+page, .apt-repair, .weui-tab__content {
+  height: 100%;
+  width: 100%;
+  background-color: #eee;
+  box-sizing: border-box;
+}
+
+.apt-repair {
+  padding: 10px 0;
+}
+.weui-panel{
+  margin:0;
+}
+/*  行样式  */
+.apr-row {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.weui-cell{
+  padding: 0.8rem 1rem;
+}
+
+.apr-row image {
+  width: 2rem;
+  height: 1.5rem;
+}
+.apr-label{
+  /* text-align:justify;
+  text-align-last:justify;
+  display: block;
+  width:4.5rem; */
+}
+.apr-con{
+  color: #888;
+}
+/* 标题 */
+.apt-repair-title{
+  font-size:0.8rem;
+  padding:0.5rem 0.8rem;
+  color:#888;
+}
+
+/* 上传头像  */
+.apr-cards{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.apr-cards .weui-uploader__input-box{
+  padding: 0 0.3rem 0.7rem 0.3rem;
+  border:1px dashed #aaa;
+  border-radius:0.3rem;
+  margin:0;
+}
+.apr-cards-photo{
+  width:6rem;
+  height:6rem;
+  position: relative;
+  box-sizing:border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-img{
+  width:100%;
+  height:100%;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  border-radius:0.3rem;
+}
+/* 右侧说明文字  */
+.card-info{
+  text-align: left;
+  margin-left:1rem;
+}
+.card-info-con{
+  color:#888;
+  font-size:0.8rem;
+}
+/* 底部大按钮  */
+.apr-btn{
+  padding: 1rem 2rem;
+  margin-top:4rem;
+}
+.apr-btn button{
+  background-color:#2f92f8;
+  width: 16rem;
+}
